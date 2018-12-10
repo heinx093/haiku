@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Specials - Haiku Japanese Bistro</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .container {
+            width: 1180px;
+            height: 200px;
+            background-color: #FFFFFF;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .main-image-specials {
+            width: 1180px;
+            height: 500px;
+            background-image: url("images/specials-image.jpg");
+            position: absolute;
+        }
+
+        .nav-bar {
+            height: 40px;
+            width: 1180px;
+            background-color: #FFFFFF;
+            position: absolute;
+            left: 0px;
+            top: 10px;
+        }
+
+        .nav-buttons {
+            position: absolute;
+            height: 18px;
+            width: 180px;
+            top: 8px;
+            font-family: "Reem Kufi", sans-serif;
+            color: #343339;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .active {
+            color: #D05E43;
+        }
+
+        #menu {
+            left: 150px;
+        }
+
+        #specials {
+            left: 350px;
+        }
+
+        #about-us {
+            left: 550px;
+        }
+
+        #reservations {
+            left: 750px;
+        }
+
+        #order-online {
+            left: 950px;
+        }
+
+        #logo-home {
+            position: absolute;
+            left: 73px;
+            top: -10px;
+            width: 55px;
+            height: 60px;
+            background-color: #FFFFFF;
+            border-radius: 0px 0px 5px 5px;
+            padding-left: 1px;
+        }
+
+        .main-content {
+            width: 1180px;
+            height: 300px;
+            position: absolute;
+            top: 500px;
+            left: 0px;
+            background-color: #FFFFFF;
+        }
+
+        .content-container {
+            width: 1180px;
+            position: absolute;
+            top: 0px;
+            left: 360px;
+            background-color: white;
+        }
+
+        .specials-container {
+            width: 1180px;
+            height: 415px;
+            position: absolute;
+            left: 0px;
+            top: 95px;
+            background-color: #809C35;
+        }
+
+        .date-night {
+            width: 1180px;
+            height: 250px;
+            position: absolute;
+            left: 0px;
+            top: 95px;
+            background-color: #809C35;
+        }
+
+        .happy_hour {
+            width: 1180px;
+            height: 250px;
+            position: absolute;
+            left: 0px;
+            top: 95px;
+            background-color: #809C35;
+        }
+
+        .tablink {
+            background-color: #B7CD3A;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            font-size: 17px;
+            width: 120px;
+            height: 80px;
+            margin: 20px;
+            display: inline-block;
+            font-family: "Reem Kufi", sans-serif;
+            border-radius: 15px 15px 0 0;
+        }
+
+        /* Change background color of buttons on hover */
+        .tablink:hover {
+            background-color: #597A31;
+        }
+
+        /* Set default styles for tab content */
+        .tabcontent {
+            background-color: #809C35;
+            display: none;
+            padding: 50px;
+            text-align: center;
+            width: 1180px;
+        }
+
+        /* Style each tab content individually */
+        #lunch {
+            background-color: #809C35;
+        }
+
+        #date-night {
+            background-color: #809C35;
+        }
+
+        #drinks {
+            background-color: #809C35;
+        }
+
+        table {
+            width: 320px;
+            margin-left: 30px;
+            margin-top: 0px;
+            text-align: left;
+            border-collapse: separate;
+            border-spacing: 0px 15px;
+            position: absolute;
+            left: 20px;
+            display: inline-block;
+        }
+
+        .table_01 {
+            position: absolute;
+            top: 111px;
+        }
+
+        .table_02 {
+            width: 320px;
+            position: absolute;
+            left: 383.3px;
+        }
+
+        .table_03 {
+            width: 320px;
+            position: absolute;
+            left: 766.6px;
+            top: 111px;
+        }
+
+        .table_04 {
+            width: 280px;
+            position: absolute;
+            left: 210px;
+            top: 80px;
+            border-collapse: separate;
+            border-spacing: 0px 20px 0px 20px;
+        }
+
+        .table_05 {
+            width: 280px;
+            position: absolute;
+            left: 610px;
+            top: 80px;
+        }
+
+        .table_06 {
+            width: 300px;
+            position: absolute;
+            left: 335px;
+            top: 80px;
+        }
+
+        .table_07 {
+            width: 300px;
+            position: absolute;
+            left: 595px;
+            top: 80px;
+        }
+
+        th {
+            vertical-align: top;
+        }
+
+        h3 {
+            font-family: "Reem Kufi", sans-serif;
+            color: #FFFFFF;
+            font-size: 18px;
+        }
+
+        .dateh3 {
+            font-size: 20px;
+        }
+
+        .datep {
+            font-size: 16px;
+        }
+
+        h4 {
+            font-family: "Reem Kufi", sans-serif;
+            color: #FFFFFF;
+            font-size: 14px;
+        }
+
+        #lunch-time {
+            color: #FFFFFF;
+        }
+
+        table p {
+            font-size: 14px;
+            font-family: Arial, serif;
+            line-height: 18px;
+            font-weight: lighter;
+            color: #B7CD3A;
+        }
+
+        h2 {
+            font-family: "Reem Kufi", sans-serif;
+            color: #FFFFFF;
+            font-size: 18px;
+            position: absolute;
+            left: 6px;
+        }
+
+        .pink {
+            position: absolute;
+            top: -10px;
+            width: 340px;
+            height: 30px;
+            background-color: #B7CD3A;
+            border-radius: 7px;
+            padding: 1px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .loveboat {
+            width: 280px;
+            height: 30px;
+            position: absolute;
+            top: 40px;
+            left: 450px;
+            background-color: #B7CD3A;
+            border-radius: 7px;
+            padding: 1px;
+        }
+
+        .happy-hour-times {
+            width: 420px;
+            height: 30px;
+            position: absolute;
+            top: 40px;
+            left: 390px;
+            background-color: #B7CD3A;
+            border-radius: 7px;
+            padding: 1px;
+        }
+
+        .footer {
+            width: 1180px;
+            height: 160px;
+            position: absolute;
+            left: 0px;
+            top: 1010px;
+            background-color: #343339;
+            font-family: "Reem Kufi", sans-serif;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        #contact-info {
+            width: 385px;
+            height: 14px;
+            position: absolute;
+            left: 407px;
+            top: 50px;
+        }
+
+        #border {
+            position: absolute;
+            width: 580px;
+            height: 0px;
+            left: 310px;
+            top: 80px;
+            border: 1px solid #FFFFFF;
+        }
+
+        #footer-navigation {
+            position: absolute;
+            width: 474px;
+            height: 17px;
+            left: 363px;
+            top: 95px;
+            font-size: 12px;
+        }
+
+        a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .lunch-footer {
+            position: absolute;
+            top: 415px;
+        }
+
+        .date-footer {
+            position: absolute;
+            top: 250px;
+        }
+
+        .drink-footer {
+            position: absolute;
+            top: 250px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="main-image-specials"></div>
+    <div class="nav-bar">
+        <div id="logo-home"><a href="index.html"><img src="images/haiku_logo.jpg" alt="haiku japanese bistro sushi sashimi"></a></div>
+        <a href="menu.html" class="nav-buttons" id="menu">MENU</a>
+        <a href="specials.html" class="nav-buttons active" id="specials">SPECIALS</a>
+        <a href="about.html" class="nav-buttons" id="about-us">ABOUT US</a>
+        <a href="reservations.html" class="nav-buttons" id="reservations">RESERVATIONS</a>
+        <a href="https://www.bitesquad.com/food/haiku-japanese-bistro/260" target="blank" class="nav-buttons"
+           id="order-online">ORDER ONLINE</a>
+    </div><!-- end of "nav-bar" div -->
+    <div class="main-content"> <!--MAIN CONTENT -->
+
+        <div class="content-container">
+            <button class="tablink" onclick="openCity('lunch', this, '#809C35')" id="defaultOpen">Lunch</button>
+            <button class="tablink" onclick="openCity('date-night', this, '#809C35')">Date Night</button>
+            <button class="tablink" onclick="openCity('drinks', this, '#809C35')">Happy Hour</button>
+        </div>
+
+        <div>
+            <div id="lunch" class="tabcontent specials-container">
+                <table class="table_01">
+
+                    <tr>
+                        <th>
+                            <h3>Hibachi Lunch</h3>
+                            <p>Hibachi Vegetables on a bed of fried rice. Comes with your choice of miso soup or a side
+                                salad.</p>
+                            <p>Add chicken $1. Add steak, salmon, or shrimp $2. Add fillet mignon $5.</p>
+
+                        </th>
+                        <th>
+                            <h3>$7.50</h3>
+                        </th>
+                    </tr>
+                </table>
+                <div class="table_02">
+                    <table>
+                        <tr>
+                            <th>
+                                <div class="pink"><h3 id="lunch-time">Lunch served Monday - Friday until 3pm</h3></div>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h3>&nbsp</h3>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h3>Sushi Bar</h3>
+                                <p>Served with miso soup or salad</p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h4>Two Roll Combo</h4>
+                                <p>Each additional roll $4</p>
+                            </th>
+                            <th>
+                                <h4>$8.50</h4>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h4>Lunch Combo</h4>
+                                <p>5 pieces sushi and 1 California roll</p>
+                                <p>Substitue sashimi for sushi $1</p>
+                            </th>
+                            <th>
+                                <h4>$10.50</h4>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <th>
+                                <h4>Unagi Don</h4>
+                                <p>Grilled eel on a bed of white rice with eel sauce</p>
+                            </th>
+                            <th>
+                                <h4>$12.50</h4>
+                            </th>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="table_03">
+                    <table>
+
+                        <tr>
+                            <th>
+                                <h3>Lunch Box</h3>
+                                <p>Served with two pieces of shumai, miso soup, salad, and a California roll.</p>
+                                <p>Choose from teriyaki (chicken, steak, or salmon), tempura (shrimp or vegetable), or
+                                    katsu (chicken or pork).</p>
+
+                            </th>
+                            <th>
+                                <h3>$11.50</h3>
+                            </th>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="footer lunch-footer">
+                    <p id="contact-info">(612)333-8888 | 620 Washington Ave SE, Minneapolis, MN 55414</p>
+                    <div id="border"></div>
+                    <p id="footer-navigation"><a href="index.html">HOME</a> | <a href="menu.html">MENU</a> | <a
+                            href="specials.html">SPECIALS</a> | <a href="about.html">ABOUT US</a> | <a
+                            href="reservations.html">RESERVATIONS</a>
+                        | <a href="https://www.bitesquad.com/food/haiku-japanese-bistro/260" target="_blank">ORDER
+                            ONLINE</a>
+                    </p>
+
+                </div><!-- end of "footer" div -->
+
+            </div>
+            <div id="date-night" class="tabcontent date-night">
+
+                <div class="loveboat"><h3>Meals designed with two in mind</h3></div>
+
+                <table class="table_04" cellpadding="5" cellspacing="5">
+
+                    <tr>
+                        <th>
+                            <h3 class="dateh3">Sushi for 2</h3>
+                            <p class="datep">18 pieces of assorted fish sushi, 1 spicy tuna roll, 1 spicy salmon
+                                roll</p>
+                        </th>
+                        <th>
+                            <h3 class="dateh3">$42</h3>
+                        </th>
+                    </tr>
+
+                </table>
+
+                <table class="table_05">
+                    <tr>
+                        <th>
+                            <h3 class="dateh3">Love Boat</h3>
+                            <p class="datep">8 pieces of sushi, 15 pieces of sashimi, 1 spicy tuna roll, 1 rainbow
+                                roll</p>
+                        </th>
+                        <th>
+                            <h3 class="dateh3">$49</h3>
+                        </th>
+                    </tr>
+                </table>
+
+                <div class="footer date-footer">
+                    <p id="contact-info">(612)333-8888 | 620 Washington Ave SE, Minneapolis, MN 55414</p>
+                    <div id="border"></div>
+                    <p id="footer-navigation"><a href="index.html">HOME</a> | <a href="menu.html">MENU</a> | <a
+                            href="specials.html">SPECIALS</a> | <a href="about.html">ABOUT US</a> | <a
+                            href="reservations.html">RESERVATIONS</a>
+                        | <a href="https://www.bitesquad.com/food/haiku-japanese-bistro/260" target="_blank">ORDER
+                            ONLINE</a>
+                    </p>
+
+                </div><!-- end of "footer" div -->
+
+            </div>
+
+
+            <div id="drinks" class="tabcontent happy_hour">
+
+                <div class="happy-hour-times"><h3>Available Monday - Thursday 2 - 5pm and 9 - 11pm</h3></div>
+
+                <table class="table_06" cellpadding="10">
+                    <tr>
+                        <th><h3 class="dateh3">Rail Drinks</h3></th>
+                        <th><h3 class="dateh3">$3.50</h3></th>
+                    </tr>
+                    <tr>
+                        <th><h3 class="dateh3">House Wines</h3></th>
+                        <th><h3 class="dateh3">$2 off</h3></th>
+                    </tr>
+                </table>
+
+                <table class="table_07" cellpadding="10">
+                    <tr>
+                        <th><h3 class="dateh3">Domestic Beers</h3></th>
+                        <th><h3 class="dateh3">$2.50</h3></th>
+                    </tr>
+                    <tr>
+                        <th><h3 class="dateh3">Imported Beers</h3></th>
+                        <th><h3 class="dateh3">$3.50</h3></th>
+                    </tr>
+                </table>
+
+                <div class="footer drink-footer">
+                    <p id="contact-info">(612)333-8888 | 620 Washington Ave SE, Minneapolis, MN 55414</p>
+                    <div id="border"></div>
+                    <p id="footer-navigation"><a href="index.html">HOME</a> | <a href="menu.html">MENU</a> | <a
+                            href="specials.html">SPECIALS</a> | <a href="about.html">ABOUT US</a> | <a
+                            href="reservations.html">RESERVATIONS</a>
+                        | <a href="https://www.bitesquad.com/food/haiku-japanese-bistro/260" target="_blank">ORDER
+                            ONLINE</a>
+                    </p>
+
+                </div><!-- end of "footer" div -->
+            </div>
+
+        </div>
+
+    </div>
+
+</div><!-- end of "main-content" div -->
+
+<!--END OF MAIN CONTENT -->
+
+</div><!-- end of "container" div -->
+
+<script>
+    function openCity(cityName, elmnt, color) {
+        // Hide all elements with class="tabcontent" by default */
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove the background color of all tablinks/buttons
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+        }
+
+        // Show the specific tab content
+        document.getElementById(cityName).style.display = "block";
+
+        // Add the specific color to the button used to open the tab content
+        elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

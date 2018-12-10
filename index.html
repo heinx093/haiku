@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Haiku Japanese Bistro - Home</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .container {
+        height: 960px;
+        width: 1180px;
+        background-color: #FFFFFF;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .main-image {
+        height: 390px;
+        width: 1180px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-image: url("images/home-image.jpg");
+    }
+
+    #title-box {
+        height: 220px;
+        width: 380px;
+        position: absolute;
+        left: 410px;
+        top: 100px;
+        background-color: #FFFFFF;
+        padding-top: 10px;
+        border-radius: 12px;
+
+    }
+
+    #title {
+        height: 210px;
+        width: 380px;
+        position: absolute;
+        left: 0px;
+        top: -5px;
+        margin-top: 6px;
+
+    }
+
+    h1 {
+        font-family: "Reem Kufi", sans-serif;
+        text-align: center;
+        font-size: 48px;
+        color: #D05E43;
+    }
+
+    .nav-bar {
+        height: 40px;
+        width: 1180px;
+        background-color: #FFFFFF;
+        position: absolute;
+        left: 0px;
+        top: 10px;
+    }
+
+    .nav-buttons {
+        position: absolute;
+        height: 18px;
+        width: 180px;
+        top: 8px;
+        font-family: "Reem Kufi", sans-serif;
+        color: #343339;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    #menu {
+        left: 150px;
+    }
+
+    #specials {
+        left: 350px;
+    }
+
+    #about-us {
+        left: 550px;
+    }
+
+    #reservations {
+        left: 750px;
+    }
+
+    #order-online {
+        left: 950px;
+    }
+
+    #logo-home {
+        position: absolute;
+        left: 73px;
+        top: -10px;
+        width: 55px;
+        height: 60px;
+        background-color: #FFFFFF;
+        border-radius: 0px 0px 5px 5px;
+        padding-left: 1px;
+    }
+
+    .main-content {
+        width: 1180px;
+        height: 410px;
+        position: absolute;
+        left: 0px;
+        top: 390px;
+        background-color: #FFFFFF;
+    }
+
+    .footer {
+        width: 1180px;
+        height: 160px;
+        position: absolute;
+        left: 0px;
+        top: 800px;
+        background-color: #343339;
+        font-family: "Reem Kufi", sans-serif;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #contact-info {
+        width: 385px;
+        height: 14px;
+        position: absolute;
+        left: 407px;
+        top: 50px;
+    }
+
+    #border {
+        position: absolute;
+        width: 580px;
+        height: 0px;
+        left: 310px;
+        top: 80px;
+        border: 1px solid #FFFFFF;
+    }
+
+    #footer-navigation {
+        position: absolute;
+        width: 474px;
+        height: 17px;
+        left: 363px;
+        top: 95px;
+        font-size: 12px;
+    }
+
+    a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .chef-photo {
+        width: 622px;
+        height: 410px;
+        position: absolute;
+        left: 610px;
+        top: 60px;
+    }
+
+    .slide-text {
+        font-family: "Reem Kufi", sans-serif;
+        color: #343339;
+        position: absolute;
+    }
+
+    table {
+        width: 380px;
+        position: absolute;
+        left: 210px;
+        top: 125px;
+        text-align: left;
+    }
+
+    .table_02 {
+        position: absolute;
+        top: 215px;
+    }
+
+    .table_03 {
+        width: 180px;
+        position: absolute;
+        top: 113px;
+        left: 410px;
+        border-collapse: separate;
+        border-spacing: 0px 15px;
+    }
+
+    .table_04 {
+        width: 380px;
+        position: absolute;
+        left: 210px;
+        top: 99px;
+    }
+
+    .table_05 {
+        width: 380px;
+        position: absolute;
+        left: 610px;
+        top: 99px;
+    }
+
+    .table-p {
+        font-size: 14px;
+        font-family: Arial, serif;
+        line-height: 18px;
+        font-weight: lighter;
+        color: #B7CD3A
+    }
+
+    .table_happy-hour-food{
+
+    }
+
+    h2 {
+        font-size: 24;
+        color: #D05E43;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .smaller-h3 {
+        font-size: 16px;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1180px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+        height: 350px;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        background-color: #B7CD3A;
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 3px;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+    }
+
+    /* On hover, add a dark green background */
+    .prev:hover, .next:hover {
+        background-color: #809C35;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #B7CD3A;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #809C35;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    .main-text {
+        background-color: #D05E43;
+        height: 32px;
+        width: 380px;
+        position: absolute;
+        left: 210px;
+        top: 75px;
+        font-family: "Reem Kufi", sans-serif;
+        color: #FFFFFF;
+        font-size: 24px;
+        line-height: normal;
+        padding-left: 5px;
+        border-radius: 7px;
+    }
+
+    .reviews-main-text{
+        width: 780px;
+        position: absolute;
+        top: 50px;
+    }
+
+    .yelp{
+        width: 180px;
+        height: 30px;
+        background-color: #B7CD3A;
+        color: #FFFFFF;
+        font-family: "Reem Kufi", sans-serif;
+        font-size: 18px;
+        position: absolute;
+        left: 500px;
+        top: 300px;
+        border-radius: 7px;
+        text-align: center;
+        padding-top: 1px;
+    }
+
+    .yelp:hover{
+        background-color: #809C35;
+    }
+
+    h2 {
+        font-family: "Reem Kufi", sans-serif;
+        color: #FFFFFF;
+        margin-bottom: 3px;
+        padding-left: 1px;
+    }
+
+    i {
+        font-size: 14px;
+    }
+
+</style>
+
+
+<body>
+<div class="container">
+    <div class="main-image"></div>
+    <div id="title-box">
+        <div id="title"><h1>HAIKU JAPANESE BISTRO</h1></div>
+    </div>
+    <div class="nav-bar">
+        <div id="logo-home"><img src="images/haiku_logo.jpg" alt="haiku japanese bistro sushi sashimi"></div>
+        <a href="menu.html" class="nav-buttons" id="menu">MENU</a>
+        <a href="specials.html" class="nav-buttons" id="specials">SPECIALS</a>
+        <a href="about.html" class="nav-buttons" id="about-us">ABOUT US</a>
+        <a href="reservations.html" class="nav-buttons" id="reservations">RESERVATIONS</a>
+        <a href="https://www.bitesquad.com/food/haiku-japanese-bistro/260" target="_blank" class="nav-buttons"
+           id="order-online">ORDER ONLINE</a>
+    </div><!-- end of "nav-bar" div -->
+    <div class="main-content">
+
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="main-text">HAPPY HOUR</div>
+                <div class="slide-text">
+
+                    <table>
+                        <tr>
+                            <th><h3>Monday-Thursday</h3></th>
+                        </tr>
+                        <tr>
+                            <th><h3 class="smaller-h3">&nbsp &nbsp &nbsp 2 - 5pm</h3></th>
+                        </tr>
+                        <tr>
+                            <th><h3 class="smaller-h3">&nbsp &nbsp &nbsp 9 - 11:30pm</h3></th>
+                        </tr>
+                    </table>
+
+                    <table class="table_03">
+                        <tr>
+                            <th><h3>Rail Drinks</h3></th>
+                            <th>$3.50</th>
+                        </tr>
+                        <tr>
+                            <th><h3>House Wines</h3></th>
+                            <th>$2 off</th>
+                        </tr>
+                        <tr>
+                            <th><h3>Domestic Beers</h3></th>
+                            <th>$2.50</th>
+                        </tr>
+                        <tr>
+                            <th><h3>Imported Beers</h3></th>
+                            <th>$3.50</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="main-text">CHEF'S SPECIALS</div>
+                <div class="slide-text">
+
+                    <table>
+                        <tr>
+                            <th><h3>Black Dragon Roll</h3></th>
+                            <th><h3>$14</h3></th>
+                        </tr>
+                        <tr>
+                            <th><p class="table-p">Spicy crab and avocado inside, topped with eel, avocado, and eel
+                                sauce.</p>
+                        </tr>
+                        </th>
+                    </table>
+
+                    <table class="table_02">
+                        <tr>
+                            <th><h3>Sweet Heart Roll</h3></th>
+                            <th>$15</th>
+                        </tr>
+                        <tr>
+                            <th><p class="table-p">Spicy crab and avocado inside, topped with eel, avocado, and eel
+                                sauce.</p>
+                        </tr>
+                        </th>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="mySlides fade">
+                <div class=" main-text reviews-main-text">REVIEWS</div>
+                <div class="slide-text">
+
+                    <table class="table_04">
+                        <tr>
+                            <th><h3>&#9733; &#9733; &#9733; &#9733;</h3></th>
+                        </tr>
+                        <tr>
+                            <th><h3 class="smaller-h3">"As a sushi guru, I have been looking for my new place to go in
+                                Minneapolis. So far, this place is in the lead! If you are a fan of sashimi, they have
+                                some of the freshest I have tasted in Minnesota."</h3><i> -Mika B., Yelp</i>
+                        </tr>
+                    </table>
+
+                    <table class="table_05">
+                        <tr>
+                            <th><h3>&#9733; &#9733; &#9733; &#9733; &#9733;</h3></th>
+                        </tr>
+                        <tr>
+                            <th><h3 class="smaller-h3">"Excellent service and food. Friendly waiters and the service is very fast and efficient. The California Roll was great!"</h3><i> -George G., Yelp</i>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="yelp"><a href="https://www.yelp.com/biz/haiku-japanese-bistro-minneapolis-2" target="blank">More reviews on Yelp</a></div>
+            </div>
+
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+    </div><!-- end of "main-content" div -->
+    <div class="footer">
+        <p id="contact-info">(612)333-8888 | 620 Washington Ave SE, Minneapolis, MN 55414</p>
+        <div id="border"></div>
+        <p id="footer-navigation"><a href="index.html">HOME</a> | <a href="menu.html">MENU</a> | <a
+                href="specials.html">SPECIALS</a> | <a href="about.html">ABOUT US</a> | <a href="reservations.html">RESERVATIONS</a>
+            | <a href="https://www.bitesquad.com/food/haiku-japanese-bistro/260" target="_blank">ORDER ONLINE</a></p>
+
+    </div><!-- end of "footer" div -->
+</div><!-- end of "container" div -->
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+
+    }
+</script>
+
+</body>
+</html>
